@@ -13,5 +13,8 @@ namespace CheckDesk_API.Database
 
         
         public DbSet<User> user { get; set; }
+        public DbSet<CheckDesk_API.Models.Parc> Parc { get; set; } = default!;
+        public DbSet<CheckDesk_API.Models.Poste> Poste { get; set; } = default!;
+        public DbSet<CheckDesk_API.Models.Salle> Salle { get; set; } = default!;
     }
 }
