@@ -11,8 +11,8 @@ namespace CheckDesk_API.Services
         {
             Users = new List<User>
         {
-            new User { Id = 1, Name = "Pierre" },
-            new User { Id = 2, Name = "Diego" }
+            new User { Id = 1, Lastname = "Pierre" },
+            new User { Id = 2, Lastname = "Diego" }
         };
         }
     }
