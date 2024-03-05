@@ -5,7 +5,9 @@ Le projet CheckDesk est un projet réalisé dans le cadre d'un mastère en infor
 CheckDesk est un projet comprenant 4 parties, toutes réalisé en dotnet : 
 
 **CheckDesk-API** : Partie central du projet, elle permet la centralisation des trois autres parties afin quelles communiques entre elle grace à la BDD.
+
 **CheckDesk-WEB** : Partie métier du projet, la partie web est l'application de gestion de l'ensemble du projet. Elle permet de configurer TOUT sur l'application. Réalisé avec Blazor server, nous pouvons également visualiser 
+
 **CheckDesk-Windows** : Application à deployer sur les ordinateurs à monitorer, elle permet la récolte des informations du desktop.
 
 ## Lancer l'API:
