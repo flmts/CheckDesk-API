@@ -18,7 +18,7 @@ namespace CheckDesk_API
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite("Data Source=Database/CheckDesk.db"));
+                options.UseSqlite("Data Source=C:\\Users\\flori\\Documents\\Projets dev\\DeskCheck\\CheckDesk-API\\CheckDesk-API\\Database\\CheckDesk.db"));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
