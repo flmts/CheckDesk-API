@@ -16,7 +16,7 @@ namespace CheckDesk_API
 
             // Add services to the container.
             IConfiguration configuration = new ConfigurationBuilder()
-                       .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                       .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true)
                        .Build();
 
             // Accéder à votre variable personnalisée
