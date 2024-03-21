@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CheckDesk_API.Database;
+using Microsoft.Extensions.Configuration;
 
 namespace CheckDesk_API
 {
@@ -14,11 +15,16 @@ namespace CheckDesk_API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            IConfiguration configuration = new ConfigurationBuilder()
+                       .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                       .Build();
+
+            // Accéder à votre variable personnalisée
+            var maVariable = configuration["CustomSettings:UrlDB"];
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite("Data Source=C:\\Users\\flori\\Documents\\Projets dev\\DeskCheck\\CheckDesk-API\\CheckDesk-API\\Database\\CheckDesk.db"));
+                options.UseSqlite(maVariable));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
